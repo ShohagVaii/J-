@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Mim Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hind+Siliguri:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff4f6;--bg2:#fde3ea;--ink:#4b2e39;--rose:#e0728f;--gold:#b98b6a;--card:rgba(255,255,255,.72);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1217;--bg2:#2b1a22;--ink:#f7e8ee;--rose:#f08fa9;--gold:#d9ae8c;--card:rgba(50,30,40,.7)}}
+:root[data-theme="dark"]{--bg:#1c1217;--bg2:#2b1a22;--ink:#f7e8ee;--rose:#f08fa9;--gold:#d9ae8c;--card:rgba(50,30,40,.7)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2) 60%,var(--bg));color:var(--ink);font-family:"Hind Siliguri",system-ui,sans-serif;line-height:2;overflow-x:hidden}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--rose);z-index:20}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.fl{position:absolute;bottom:-40px;opacity:.5;animation:up linear infinite}
+@keyframes up{to{transform:translateY(-115vh) rotate(40deg)}}
+.b{position:fixed;pointer-events:none;z-index:30;animation:pop 1.1s ease-out forwards;font-size:22px}
+@keyframes pop{to{transform:translate(var(--x),var(--y)) scale(.4);opacity:0}}
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;z-index:2}
+.script{font-family:"Great Vibes","Snell Roundhand",cursive;font-weight:400;color:var(--rose)}
+h1{font-size:clamp(3.4rem,16vw,7.5rem);margin:0;line-height:1.1}
+h1 span{display:inline-block;opacity:0;transform:translateY(20px) scale(.6);animation:in .9s forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.heart{display:inline-block;animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.25)}}
+.sub{font-size:1.2rem;margin:.4rem 0 2rem;color:var(--gold);letter-spacing:.06em}
+button{font:inherit;cursor:pointer;border:1px solid var(--rose);background:var(--card);color:var(--ink);padding:.7rem 1.6rem;border-radius:999px;transition:.25s}
+button:hover,button:focus-visible{background:var(--rose);color:#fff;outline:none}
+.hint{position:absolute;bottom:22px;font-size:.85rem;opacity:.6}
+main{max-width:640px;margin:0 auto;padding:12vh 22px 8vh;position:relative;z-index:2}
+.to{font-size:2.6rem;text-align:center;margin-bottom:6vh}
+.r{background:var(--card);backdrop-filter:blur(6px);border-radius:22px;padding:1.2rem 1.4rem;margin:0 0 9vh;font-size:1.08rem;opacity:0;transform:translateY(34px);transition:opacity 1s,transform 1s}
+.r.on{opacity:1;transform:none}
+.r.big{font-size:1.3rem;text-align:center;border:1px solid var(--rose)}
+.sep{text-align:center;font-size:1.6rem;margin:-4vh 0 8vh;opacity:.8}
+.sep i{font-style:normal;display:inline-block;cursor:pointer;transition:transform .3s}
+.sep i:hover{transform:scale(1.5) rotate(15deg)}
+.wish{text-align:center;margin:10vh 0}
+.candle{cursor:pointer;display:inline-block;font-size:4rem;line-height:1;margin:.6rem;user-select:none}
+.flame{display:block;animation:fk .6s infinite alternate}
+@keyframes fk{to{transform:scale(1.12,.92) rotate(3deg)}}
+.out .flame{opacity:0;animation:none}
+.end{text-align:center;padding:10vh 0 4vh}
+.end h2{font-size:clamp(2.2rem,9vw,3.6rem);margin:.2em 0;line-height:1.3}
+.tag{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
+.tag span{border:1px solid var(--rose);border-radius:999px;padding:.2rem 1rem;cursor:pointer;background:var(--card)}
+#mode{position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:25;padding:.3rem .7rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r,h1 span{opacity:1;transform:none}}
+#mus{position:fixed;right:64px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:25;padding:.3rem .7rem}
+#ht{cursor:pointer;width:130px;height:130px;border-radius:50%;background:var(--card);border:2px solid var(--rose);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 0 40px rgba(224,114,143,.35);font-size:3.2rem;line-height:1.2;animation:beat 1.6s infinite}
+#ht small{font-size:.75rem;color:var(--rose)}
+#ty{min-height:2.4rem;font-size:2rem;color:var(--rose);margin-bottom:1.2rem}
+.btns{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+#lyr{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translateX(-50%) translateY(20px);opacity:0;z-index:35;background:var(--card);backdrop-filter:blur(8px);border:1px solid var(--rose);padding:.5rem 1.4rem;border-radius:999px;font-size:clamp(1rem,5vw,1.5rem);white-space:nowrap;transition:.5s;pointer-events:none}
+#lyr.on{opacity:1;transform:translateX(-50%)}
+.fy{position:fixed;z-index:30;pointer-events:none;color:var(--rose);font-size:20px;animation:fyo 2.5s forwards ease-out}
+@keyframes fyo{0%{opacity:0}20%{opacity:1}100%{opacity:0;transform:translateY(-120px)}}
+#cf{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin-bottom:2rem;text-align:center;font-size:.9rem;line-height:1.7}
+.cards div{background:var(--card);border-radius:18px;padding:1rem}
+.cards b{display:block;font-size:1.05rem}
+</style>
+</head>
+<body>
+<div id="bar"></div><div id="fx"></div>
+<button id="mode" aria-label="Theme">🌙</button>
+<button id="mus" aria-label="Music">🎵</button>
+<div id="lyr"></div>
+
+<section class="hero">
+  <h1 class="script" id="t"></h1>
+  <p class="sub">Happy Birthday, Mim 🎂</p>
+  <div id="ht" role="button" tabindex="0" aria-label="হার্ট স্পর্শ করুন">❤️<small>স্পর্শ করুন</small></div>
+  <div id="ty" class="script"></div>
+  <div class="btns"><button id="open">✉️ মেসেজ খুলুন</button><button id="song1">🎶 Happy Birthday গান</button></div>
+  <span class="hint"> Jᴀɴᴜ ᴛᴀʜ </span>
+</section>
+
+<main id="msg">
+<div class="to script">To Mim ❤️</div>
+
+<p class="r big">শুভ জন্মদিন, আমার কলিজা। ❤️🎂</p>
+
+<p class="r">আমি হয়তো সব কথা সুন্দর করে গুছিয়ে বলতে পারি না, নিজের অনুভূতিগুলোও ঠিকমতো প্রকাশ করতে পারি না। তবে একটা কথা সত্যি, তোমাকে আমি কতটা ভালোবাসি, সেটা হয়তো কোনোদিন পুরোপুরি বোঝাতে পারব না। শুধু জানি, আমার জীবনে তোমার জায়গাটা বরাবরই একটু আলাদা।</p>
+
+<p class="r">কখন যে তুমি আমার এতটা আপন হয়ে উঠলে, বুঝতেই পারিনি। জানতাম, তোমার জীবনে আগে থেকেই অনেক কিছু জড়িয়ে আছে, তবুও মনকে বোঝাতে পারিনি। কখন যে তোমার প্রতি ভালো লাগাটা ভালোবাসায় পরিণত হয়ে গেলো, আর সেই ভালোবাসা থেকে এতটা মায়া জন্মেছিল, তা নিজেও বুঝতে পারিনি। ❤️‍🩹</p>
+<div class="sep"><i>🌸</i> <i>💖</i> <i>🦋</i></div>
+
+<p class="r">তোমার সঙ্গে কাটানো সময়গুলো আমার কাছে ভীষণ প্রিয়। তোমার সঙ্গে কথা বলা, দেখা করা, তোমার হাসি, তোমার অভিমান—ছোট ছোট এই মুহূর্তগুলোই আমার কাছে সবচেয়ে সুন্দর অংশ। তোমাকে ঘিরে কত স্বপ্ন, কিছু কল্পনা! হয়তো সেই স্বপ্নগুলো কখনো পূরণ হবে না, তবুও অনুভূতিগুলো আমার কাছে একদম সত্য। তোমাকে ভালোবেসে যে সুন্দর মুহূর্তগুলো পেয়েছি, সেগুলোর জন্য আমি সবসময় কৃতজ্ঞ।</p>
+
+<p class="r">মাঝেমধ্যে মনে হয়, পরিস্থিতি যদি অন্যরকম হতো, আমাদের গল্পটা যদি অন্যভাবে লেখা হতো, তাহলে হয়তো আজ সবকিছু অন্যরকম হতো। তোমাকে ভালোবেসে একসময় তোমার সঙ্গে একটা সুন্দর ভবিষ্যতের স্বপ্ন দেখি। কিন্তু জীবন তো সবসময় আমাদের মনের মতো হয় না। কিছু ইচ্ছা অপূর্ণ থেকে যায়, কিছু গল্প পূর্ণতা পায় না, আর কিছু মানুষকে ভীষণ আপন মনে হলেও শেষ পর্যন্ত নিজের করে পাওয়া হয় না।</p>
+<div class="sep"><i>🕊️</i> <i>💌</i> <i>✨</i></div>
+
+<p class="r">তোমাকে অন্য কারও সঙ্গে নিজের জীবন গুছিয়ে নিতে দেখাটা আমার জন্য সহজ ছিল না। কিছু কষ্ট আছে, যেগুলো কাউকে বোঝানো যায় না, শুধু নিজের ভেতরেই চুপচাপ রেখে দিতে হয়। আমারও হয়তো তেমন কিছু অনুভূতি আছে, যেগুলো ভাষায় প্রকাশ করা কঠিন। তবুও আমি জানি, তোমার জীবনে তোমার নিজের একটা জগৎ আছে, তোমার সংসার আছে, তোমার কিছু দায়িত্ব আর সম্পর্ক আছে। সেগুলোর প্রতি আমার সম্মান রয়েছে।</p>
+
+<p class="r">আমি কখনো চাই না, আমার ভালোবাসা কিংবা আমার কোনো অনুভূতি তোমার জীবনে অশান্তির কারণ হোক। তোমার কাছে আমার কোনো দাবি নেই, তোমাকে নিয়ে কোনো অভিযোগও রাখতে চাই না। তুমি তোমার স্বামী সন্তান নিয়ে সুন্দরভাবে জীবন কাটাও, তোমাদের সংসারে ভালোবাসা, বিশ্বাস আর শান্তি বজায় থাকুক—এটাই মন থেকে চাই। কারণ তোমাকে ভালোবেসেছি বলেই তোমার ভালো থাকাটাও আমার কাছে গুরুত্বপূর্ণ। যদি কখনো আমার লাইফে আসতে চাও, যদি কোনো কিন্তু ছাড়াই যেকোনো সময় চলে আসতে পারো। তোমার জন্য আমার মনের দরজা সব সময় খোলা।</p>
+<div class="sep"><i>🌷</i> <i>🤍</i> <i>🌙</i></div>
+
+<p class="r">জানো, কিছু মানুষ জীবনে আসে, যাদের সঙ্গে শেষ পর্যন্ত থাকা হয় না, অথচ তাদের স্মৃতিগুলো মনের ভেতর বিশেষ একটা জায়গা জুড়ে থাকে। সময়ের সঙ্গে সম্পর্ক বদলে যায়, কথা বলা কমে যায়, দূরত্ব বাড়ে; কিন্তু একসময় কাউকে মন থেকে ভালোবেসেছিলাম, সেই সত্যিটা চাইলেই অস্বীকার করা যায় না। তুমিও আমার কাছে তেমনই একজন। হয়তো আমাদের গল্পটা নিজের মতো করে পূর্ণতা পায়নি, কিন্তু তোমাকে ঘিরে থাকা সুন্দর স্মৃতিগুলো আমার কাছে সবসময়ই মূল্যবান হয়ে থাকবে।</p>
+
+<p class="r">আজ তোমার জন্মদিনে আমার আলাদা করে কিছু চাওয়ার নেই। শুধু মন থেকে চাই, তুমি অনেক ভালো থাকো, সুস্থ থাকো, হাসিখুশি থাকো। তোমার জীবনের প্রতিটি দিন সুন্দর হোক, মন খারাপের সময়গুলো সহজে কেটে যাক, আর আনন্দের মুহূর্তগুলো দীর্ঘ হোক। নিজের যত্ন নিয়ো, নিজের খেয়াল রেখো। মহান আল্লাহ তোমার সব সৎ ইচ্ছা পূরণ করুন, তোমার মনকে প্রশান্তিতে ভরিয়ে রাখুন এবং তোমাকে সবসময় নিজের হেফাজতে রাখুন। তোমার মুখের সেই মিষ্টি হাসিটা যেন কোনোদিন মলিন না হয়। আমিন। 🤲🏻❤️</p>
+
+<div class="wish">
+  <p class="script" style="font-size:2rem;margin:0">একটা ইচ্ছে করো, তারপর ফুঁ দাও</p>
+  <span class="candle" id="c" role="button" tabindex="0" aria-label="মোমবাতি নেভাও"><span class="flame">🔥</span>🕯️</span>
+  <p id="wt" style="min-height:2em;margin:0"></p>
+  <button id="song2">🎂 গানটা শুনুন</button>
+</div>
+
+<p class="r">হয়তো সময়ের সঙ্গে আমাদের কথা বলা কিংবা দেখা হওয়ার সুযোগ কমে যাবে। জীবন আমাদের যার যার পথে এগিয়ে নিয়ে যাবে। তবুও তোমার সঙ্গে জড়িয়ে থাকা মুহূর্তগুলো আমার স্মৃতিতে থেকে যাবে। দূর থেকে কখনো তোমার ভালো থাকার খবর জানতে পারলে, তুমি সুখে আছো জেনে মনটা শান্তি পেলে, সেটুকুই আমার কাছে অনেক হবে। তোমাকে নিজের করে পাওয়ার ইচ্ছেটা হয়তো একসময় নীরব হয়ে যাবে, কিন্তু একসময় তোমাকে মন থেকে ভালোবেসেছিলাম—এই অনুভূতিটুকু আমার জীবনের একটা বিশেষ অধ্যায় হয়ে থাকবে।</p>
+
+<p class="r">আজকের এই বিশেষ দিনে তোমার জন্য রইল অনেক ভালোবাসা, আন্তরিক শুভকামনা আর মনভরা দোয়া। আল্লাহ তোমার জীবনকে সুন্দর করুন, তোমার সংসারে সুখ ও শান্তি দিন, তোমার প্রতিটি ভালো চাওয়া পূরণ করুন। জীবনের প্রতিটি পদক্ষেপে তুমি যেন ভালো থাকার কারণ খুঁজে পাও।</p>
+
+<p class="r big">শুভ জন্মদিন, আমার না হওয়া মহারানী। ❤️‍🩹🎂</p>
+
+<p class="r">ভালো থেকো, অনেক ভালো থেকো। নিজের যত্ন নিয়ো। আমাদের গল্পটা হয়তো পূর্ণতা পাবে না, তোমাকে নিজের করে পাওয়াও হবে না; তবুও তোমাকে ঘিরে থাকা সুন্দর স্মৃতিগুলোর জন্য আমি সারাজীবন কৃতজ্ঞ থাকবো। জীবনে তোমার পথচলা সুন্দর হোক, তোমার মুখে হাসি থাকুক, আর তোমার মনটা সবসময় ভালো থাকুক। ভালোবেসো আমার 🥰।</p>
+
+<div class="end">
+  <h2 class="script">Happy Birthday,<br>My Unfulfilled Love. ❤️🌸</h2>
+  <div class="cards"><div><b>🎂 ২১শে অক্টোবর</b>তোমার জীবনের এই সুন্দর দিনে অনেক অনেক ভালোবাসা ও শুভেচ্ছা।</div><div><b>🕊️ নীরব প্রার্থনা</b>আল্লাহ যেন তোমাকে সবসময় নিরাপদে, সুখে ও শান্তিতে রাখেন।</div><div><b>🌸 সুন্দর স্মৃতি</b>আমাদের গল্পটার স্মৃতিগুলো সারাজীবন মূল্যবান থাকবে।</div></div>
+  <div class="tag"><span>🎂 Mim</span><span>❤️ Shohag</span><span>💌 21 October</span></div>
+  <p style="margin-top:1.4rem">— সোহাগ (Shohag)</p>
+</div>
+</main>
+
+<script>
+(function(){
+var E=["❤️","💖","🌸","🦋","✨","💕","🌷","🎂"],fx=document.getElementById("fx");
+// hero text
+var t=document.getElementById("t"),w="I love you";
+w.split("").forEach(function(c,i){var s=document.createElement("span");s.textContent=c==" "?"\u00a0":c;s.style.animationDelay=(.3+i*.16)+"s";t.appendChild(s)});
+var h=document.createElement("span");h.className="heart";h.textContent=" ❤️";h.style.animationDelay="2.2s";t.appendChild(h);
+// floating background
+for(var i=0;i<16;i++){var f=document.createElement("span");f.className="fl";f.textContent=E[i%E.length];f.style.left=Math.random()*100+"%";f.style.fontSize=(14+Math.random()*20)+"px";f.style.animationDuration=(12+Math.random()*14)+"s";f.style.animationDelay=(-Math.random()*20)+"s";fx.appendChild(f)}
+// burst
+function burst(x,y,n){for(var i=0;i<(n||6);i++){var b=document.createElement("span");b.className="b";b.textContent=E[Math.floor(Math.random()*E.length)];b.style.left=x+"px";b.style.top=y+"px";b.style.setProperty("--x",(Math.random()*160-80)+"px");b.style.setProperty("--y",(-40-Math.random()*130)+"px");document.body.appendChild(b);setTimeout(function(el){el.remove()},1200,b)}}
+document.addEventListener("pointerdown",function(e){if(e.target.closest("#mode"))return;burst(e.clientX,e.clientY,5)});
+// open
+document.getElementById("open").onclick=function(){document.getElementById("msg").scrollIntoView({behavior:"smooth"})};
+// reveal
+var els=document.querySelectorAll(".r");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}})},{threshold:.15});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add("on")});
+// progress
+var bar=document.getElementById("bar");
+addEventListener("scroll",function(){var d=document.documentElement;bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+"%"},{passive:true});
+// candle
+var c=document.getElementById("c"),wt=document.getElementById("wt");
+function blow(){if(c.classList.contains("out"))return;c.classList.add("out");wt.textContent="ইচ্ছেটা পূরণ হোক। আমিন। 🤲🏻";var r=c.getBoundingClientRect();burst(r.left+r.width/2,r.top,18)}
+c.onclick=blow;c.onkeydown=function(e){if(e.key=="Enter"||e.key==" ")blow()};
+// tags & separators
+document.querySelectorAll(".tag span,.sep i").forEach(function(e){e.addEventListener("click",function(){var r=e.getBoundingClientRect();burst(r.left+r.width/2,r.top,10)})});
+// theme
+var m=document.getElementById("mode"),r=document.documentElement;
+m.onclick=function(){var d=(r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark";m.textContent=d?"🌙":"☀️"};
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},AC,mg,want=false,song=false,step=0,iv,C=null;
+function ac(){if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();mg=AC.createGain();mg.gain.value=.9;mg.connect(AC.destination)}if(AC.state=="suspended")AC.resume();return AC}
+function tone(f,t,d,v,ty){var a=ac(),o=a.createOscillator(),g=a.createGain();o.type=ty||"triangle";o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(mg);o.start(t);o.stop(t+d+.05)}
+function chime(){var t=ac().currentTime;[1046.5,1318.5,1568,2093].forEach(function(f,i){tone(f,t+i*.11,1.2,.12)})}
+function cf(o){try{if(!C&&window.confetti){var cv=document.createElement("canvas");cv.id="cf";document.body.appendChild(cv);C=confetti.create(cv,{resize:true,useWorker:false})}if(C)C(Object.assign({colors:["#ffb6c1","#e0728f","#ffdab9","#c71585","#fff"],disableForReducedMotion:true},o))}catch(e){}}
+// ambient music box
+var P=[[261.6,329.6,392,523.3],[220,261.6,329.6,440],[174.6,261.6,349.2,440],[196,293.7,392,493.9]],A=[0,1,2,3,2,1,2,3];
+function amb(on){clearInterval(iv);if(on){ac();iv=setInterval(function(){var c=P[(step>>3)%4],t=AC.currentTime;tone(c[A[step%8]],t,1.8,.05,"sine");if(step%8==0)tone(c[0]/2,t,3,.05,"sine");if(step%5==4)tone(c[3]*2,t,1.2,.025,"sine");step++},520)}}
+function setMus(w){want=w;$("mus").textContent=w?"🔊":"🔇";amb(w&&!song)}
+$("mus").onclick=function(){setMus(!want)};
+$("open").addEventListener("click",function(){if(!want&&!song)setMus(true)});
+// happy birthday song
+var N={G:392,A:440,B:493.88,c:523.25,d:587.33,e:659.25,f:698.46,g:783.99};
+var L=[["Happy birthday to you 🎶",[["G",.75],["G",.25],["A",1],["G",1],["c",1],["B",2]]],
+["Happy birthday to you 🎶",[["G",.75],["G",.25],["A",1],["G",1],["d",1],["c",2]]],
+["Happy birthday, dear Mim 💖",[["G",.75],["G",.25],["g",1],["e",1],["c",1],["B",1],["A",2]]],
+["Happy birthday to you 🎂",[["f",.75],["f",.25],["e",1],["c",1],["d",1],["c",2]]]];
+function lyr(s){var e=$("lyr");e.textContent=s;e.classList.add("on")}
+function sing(){if(song)return;song=true;amb(false);var t0=ac().currentTime+.2,B=.55,off=0;
+L.forEach(function(l){setTimeout(lyr,off*B*1000+200,l[0]);setTimeout(function(){cf({particleCount:30,spread:70,origin:{y:.8}})},off*B*1000+200);l[1].forEach(function(n){var f=N[n[0]],d=n[1]*B;tone(f,t0+off*B,d*1.3+.4,.22);tone(f/2,t0+off*B,d+.3,.08,"sine");off+=n[1]});off+=.5});
+setTimeout(function(){chime();lyr("Happy Birthday, Mim 💖 — Shohag");cf({particleCount:200,spread:120,origin:{y:.6}});song=false;amb(want);setTimeout(function(){$("lyr").classList.remove("on")},4500)},off*B*1000+500)}
+$("song1").onclick=function(){setMus(true);sing()};$("song2").onclick=function(){sing()};
+// heart & typing
+var ht=$("ht"),typing=false,txt="I Love You, Mim ❤️";
+function love(){cf({particleCount:80,spread:70,origin:{y:.5}});chime();if(typing)return;typing=true;var el=$("ty"),i=0;el.textContent="";var tm=setInterval(function(){el.textContent+=txt.charAt(i++);if(i>=txt.length){clearInterval(tm);typing=false}},110)}
+ht.onclick=love;ht.onkeydown=function(e){if(e.key=="Enter"||e.key==" ")love()};
+// candle -> chime, confetti, song
+var blown=false;$("c").addEventListener("click",function(){if(blown)return;blown=true;chime();cf({particleCount:120,spread:100,origin:{y:.6}});setTimeout(sing,1200)});
+// floating words while scrolling
+var S=["❤️","💖","🎂","Mim","Shohag","✨","🌸","মহারানী","ভালোবাসা","🕊️","I love you"],last=0;
+addEventListener("scroll",function(){var y=scrollY;if(Math.abs(y-last)<140)return;last=y;var e=document.createElement("div");e.className="fy";e.textContent=S[Math.floor(Math.random()*S.length)];e.style.left=(8+Math.random()*78)+"%";e.style.top=(25+Math.random()*50)+"%";e.style.fontSize=(16+Math.random()*14)+"px";document.body.appendChild(e);setTimeout(function(){e.remove()},2600)},{passive:true});
+})();
+</script>
+</body>
+</html>
